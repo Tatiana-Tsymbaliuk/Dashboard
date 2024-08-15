@@ -76,4 +76,13 @@ $cell-padding: 12px;
       }
     }
   }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-data {
+      color: $header-color;
+    }
+  }
 }

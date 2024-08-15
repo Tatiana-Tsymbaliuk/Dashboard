@@ -1,0 +1,97 @@
+$primary-color: #6b3eff;
+$background-color: #fafbff;
+$text-color: #4a4a4a;
+$hover-color: lighten($primary-color, 10%);
+$border-radius: 8px;
+$transition-speed: 0.3s;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &__menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.sidebar {
+  width: 250px;
+  background-color: $background-color;
+  padding: 20px;
+  border-radius: $border-radius;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  transition: left $transition-speed ease;
+
+  &--visible {
+    left: 0;
+  }
+
+  &__item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: $text-color;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+
+    i.icon {
+      margin-right: 10px;
+      color: $text-color;
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      background-color: $hover-color;
+      color: #fff;
+
+      i.icon {
+        color: #fff;
+      }
+    }
+
+    &--active {
+      background-color: $primary-color;
+      color: #fff;
+
+      i.icon {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    left: -250px; // Прячем сайдбар за экраном
+    transition: left $transition-speed ease;
+
+    &--visible {
+      left: 0; // При появлении сайдбар перемещается на место
+    }
+  }
+}

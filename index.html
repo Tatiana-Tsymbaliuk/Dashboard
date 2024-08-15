@@ -11,50 +11,85 @@
   </head>
   <body>
     <div class="conteiner">
-      <aside class="conteiner__sidebar">
-        <div class="logo">
+      <div class="sidebar">
+        <div class="sidebar__logo">
           <img src="./images/Group 31.svg" alt="logo" class="logo" />
         </div>
-        <nav class="dashboard__nav">
-          <ul class="nav__list">
-            <li class="nav__item list">
-              <img src="./images/key.svg" alt="logo" class="logo" />
-              <a href="#" class="nav__link link">Dashboard</a>
-            </li>
-            <li class="nav__item list">
-              <img src="./images/product.svg" alt="logo" class="logo" />
-              <a href="#" class="nav__link link">Product</a>
-            </li>
-            <li class="nav__item list">
-              <img src="./images/customer.svg" alt="logo" class="logo" />
-              <a href="#" class="nav__link nav__link--active link">Customers</a>
-            </li>
-            <li class="nav__item list">
-              <img src="./images/income.svg" alt="logo" class="logo" />
-              <a href="#" class="nav__link list link">Income</a>
-            </li>
-            <li class="nav__item list">
-              <img src="./images/promote.svg" alt="logo" class="logo" />
-              <a href="#" class="nav__link link">Promote</a>
-            </li>
-            <li class="nav__item list">
-              <img src="./images/help.svg" alt="logo" class="logo" />
-              <a href="#" class="nav__link link">Help</a>
-            </li>
-          </ul>
-          <div class="user">
-            <img src="./images/user.svg" alt="User" width="42" height="42" />
-            <div class="user__data">
-              <h2 class="user__data--name">Evano</h2>
-              <p class="user__data--profession">Progect manager</p>
-            </div>
+        <div class="sidebar__items">
+          <div class="sidebar__item">
+            <img src="./images/key.svg" alt="logo-key" class="icon" />
+            Dashboard
+            <img
+              src="./images/chevron-right 2.svg"
+              alt="chevrolet-rite"
+              class="chevrolet"
+            />
           </div>
-        </nav>
-      </aside>
+          <div class="sidebar__item">
+            <img src="./images/product.svg" alt="logo" class="icon" />
+            Product
+            <img
+              src="./images/chevron-right 2.svg"
+              alt="chevrolet-rite"
+              class="chevrolet"
+            />
+          </div>
+          <div class="sidebar__item sidebar__item--active">
+            <img src="./images/customer.svg" alt="logo" class="icon" />
+            Customers
+            <img
+              src="./images/chevron-right 2.svg"
+              alt="chevrolet-rite"
+              class="chevrolet"
+            />
+          </div>
+          <div class="sidebar__item">
+            <img src="./images/income.svg" alt="logo" class="icon" />
+            Income
+            <img
+              src="./images/chevron-right 2.svg"
+              alt="chevrolet-rite"
+              class="chevrolet"
+            />
+          </div>
+          <div class="sidebar__item">
+            <img src="./images/promote.svg" alt="logo" class="icon" />
+            Promote
+            <img
+              src="./images/chevron-right 2.svg"
+              alt="chevrolet-rite"
+              class="chevrolet"
+            />
+          </div>
+          <div class="sidebar__item">
+            <img src="./images/help.svg" alt="logo" class="icon" />
+            Help
+            <img
+              src="./images/chevron-right 2.svg"
+              alt="chevrolet-rite"
+              class="chevrolet"
+            />
+          </div>
+        </div>
+        <div class="user">
+          <img src="./images/user.svg" alt="User" width="42" height="42" />
+          <div class="user__data">
+            <h2 class="user__data--name">Evano</h2>
+            <p class="user__data--profession">Progect manager</p>
+          </div>
+        </div>
+      </div>
       <div class="dashboard">
         <main class="dashboard__main">
           <header class="dashboard__header">
             <h1 class="header__title">Hello Evano 👋,</h1>
+            <button
+              class="header__menu-btn"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <img src="./images/menu.svg" alt="logo" class="logo" />
+            </button>
           </header>
 
           <section class="dashboard__content">
@@ -93,6 +128,29 @@
                   </tbody>
                 </table>
               </div>
+              <div class="customers__footer">
+                <p class="customers__footer-data">
+                  Showing data 1 to 8 of 256K entries
+                </p>
+                <div class="pagination">
+                  <button class="pagination__control pagination__control--prev">
+                    &lt;
+                  </button>
+                  <ul class="pagination__pages">
+                    <li class="pagination__page pagination__page--active">1</li>
+                    <li class="pagination__page">2</li>
+                    <li class="pagination__page">3</li>
+                    <li class="pagination__page">4</li>
+                    <li class="pagination__page pagination__page--ellipsis">
+                      ...
+                    </li>
+                    <li class="pagination__page">40</li>
+                  </ul>
+                  <button class="pagination__control pagination__control--next">
+                    &gt;
+                  </button>
+                </div>
+              </div>
             </div>
           </section>
         </main>
@@ -100,5 +158,8 @@
     </div>
     <script src="script.js"></script>
     <script src="table.js"></script>
+    <script src="pagination.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="mobil.js"></script>
   </body>
 </html>

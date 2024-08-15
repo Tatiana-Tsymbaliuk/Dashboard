@@ -1,0 +1,57 @@
+$primary-color: #6b3eff;
+$background-color: #fafbff;
+$text-color: #b5b7c0;
+$hover-color: #6b3eff;
+
+.sidebar {
+  width: 250px;
+  background-color: $background-color;
+  padding: 20px;
+  &__logo {
+    margin-bottom: 10px;
+  }
+  &__item {
+    padding: 11px;
+    font-size: 14px;
+    color: $text-color;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+
+    img.icon {
+      margin-right: 10px;
+      transition: color 0.3s;
+    }
+
+    img.chevrolet {
+      margin-left: auto;
+      transition: color 0.3s;
+    }
+    &--text {
+      color: black;
+      &:hover,
+      &:active {
+        color: #fff;
+      }
+    }
+    &:hover {
+      background-color: $hover-color;
+      color: #fff;
+      img.icon {
+        color: #fff;
+      }
+    }
+
+    &--active {
+      background-color: $primary-color;
+      color: #fff;
+
+      img.icon {
+        color: #fff;
+      }
+    }
+  }
+}
