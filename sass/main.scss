@@ -1,0 +1,10 @@
+//base styles
+@import "./base/base";
+@import "./base/reset";
+//components styles;
+@import "./components/customers";
+@import "./components/search";
+@import "./components/user";
+//utils style
+@import "./utils/variables";
+@import "./utils/layout";

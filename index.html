@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM Dashboard</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    " rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="conteiner">
+      <aside class="conteiner__sidebar">
+        <div class="logo">
+          <img src="./images/Group 31.svg" alt="logo" class="logo" />
+        </div>
+        <nav class="dashboard__nav">
+          <ul class="nav__list">
+            <li class="nav__item list">
+              <img src="./images/key.svg" alt="logo" class="logo" />
+              <a href="#" class="nav__link link">Dashboard</a>
+            </li>
+            <li class="nav__item list">
+              <img src="./images/product.svg" alt="logo" class="logo" />
+              <a href="#" class="nav__link link">Product</a>
+            </li>
+            <li class="nav__item list">
+              <img src="./images/customer.svg" alt="logo" class="logo" />
+              <a href="#" class="nav__link nav__link--active link">Customers</a>
+            </li>
+            <li class="nav__item list">
+              <img src="./images/income.svg" alt="logo" class="logo" />
+              <a href="#" class="nav__link list link">Income</a>
+            </li>
+            <li class="nav__item list">
+              <img src="./images/promote.svg" alt="logo" class="logo" />
+              <a href="#" class="nav__link link">Promote</a>
+            </li>
+            <li class="nav__item list">
+              <img src="./images/help.svg" alt="logo" class="logo" />
+              <a href="#" class="nav__link link">Help</a>
+            </li>
+          </ul>
+          <div class="user">
+            <img src="./images/user.svg" alt="User" width="42" height="42" />
+            <div class="user__data">
+              <h2 class="user__data--name">Evano</h2>
+              <p class="user__data--profession">Progect manager</p>
+            </div>
+          </div>
+        </nav>
+      </aside>
+      <div class="dashboard">
+        <main class="dashboard__main">
+          <header class="dashboard__header">
+            <h1 class="header__title">Hello Evano 👋,</h1>
+          </header>
+
+          <section class="dashboard__content">
+            <div class="customers">
+              <div class="customers__header">
+                <div class="customers__header-name">
+                  <h1 class="customers__header-title">All Customers</h1>
+                  <p class="customers__header-active">Active Members</p>
+                </div>
+
+                <div class="search">
+                  <img class="search__icon" src="./images/search.svg" />
+                  <input
+                    class="search__input"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+              <div class="customers__table-container">
+                <table class="customers__table">
+                  <thead>
+                    <tr
+                      class="customers__table-row customers__table-row--header"
+                    >
+                      <th class="customers__table-header">Customer Name</th>
+                      <th class="customers__table-header">Company</th>
+                      <th class="customers__table-header">Phone Number</th>
+                      <th class="customers__table-header">Email</th>
+                      <th class="customers__table-header">Country</th>
+                      <th class="customers__table-header">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="customers-table-body">
+                    <!-- Rows will be dynamically generated here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="table.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.user {
+  padding-bottom: 0px;
+  display: flex;
+  &__data {
+    margin-left: 12px;
+    padding-bottom: 0px;
+
+    &--name {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.014rem;
+    }
+    &--profession {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.012rem;
+      color: rgb(179, 175, 175);
+      font-weight: 300;
+    }
+  }
+}

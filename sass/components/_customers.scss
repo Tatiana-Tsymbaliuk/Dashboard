@@ -1,0 +1,79 @@
+// styles.scss
+
+$active-color: #38a169;
+$active-backgraund-color: rgba(22, 192, 152, 0.38);
+$inactive-color: #e53e3e;
+$inactive-backgraund-color: #ffc5c5;
+$table-border-color: #e2e8f0;
+$header-background: #edf2f7;
+$header-color: rgba(181, 183, 192, 1);
+$cell-padding: 12px;
+
+.customers {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 7px;
+    }
+    &-active {
+      color: $active-color;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__table-container {
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &-row {
+      &--header {
+        border-bottom: 1px silid rgb(200, 196, 196);
+      }
+    }
+
+    &-header {
+      padding: $cell-padding;
+      text-align: left;
+      color: $header-color;
+      font-weight: 400;
+      font-size: 14px;
+      border-bottom: 2px solid $table-border-color;
+    }
+
+    &-cell {
+      padding: $cell-padding;
+      border-bottom: 1px solid $table-border-color;
+      font-size: 14px;
+
+      &--status {
+        font-weight: 400;
+
+        &--active {
+          color: $active-color;
+          padding: 4px 18px;
+          border: 1px solid $active-color;
+          border-radius: 4px;
+          background-color: $active-backgraund-color;
+        }
+
+        &--inactive {
+          color: $inactive-color;
+          padding: 4px 12px;
+          border: 1px solid $inactive-color;
+          border-radius: 4px;
+          background-color: $inactive-backgraund-color;
+        }
+      }
+    }
+  }
+}
