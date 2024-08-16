@@ -2,14 +2,24 @@ $primary-color: #6b3eff;
 $background-color: #fafbff;
 $text-color: #b5b7c0;
 $hover-color: #6b3eff;
+$transition-speed: 0.3s;
 
 .sidebar {
   width: 250px;
   background-color: $background-color;
   padding: 20px;
+  top: 0;
+  height: 100%;
+  transition: left $transition-speed ease;
+
+  &--visible {
+    left: 0; // Позиционируем сайдбар по левому краю экрана при отображении
+  }
+
   &__logo {
     margin-bottom: 10px;
   }
+
   &__item {
     padding: 11px;
     font-size: 14px;
@@ -30,16 +40,20 @@ $hover-color: #6b3eff;
       margin-left: auto;
       transition: color 0.3s;
     }
+
     &--text {
       color: black;
+
       &:hover,
       &:active {
         color: #fff;
       }
     }
+
     &:hover {
       background-color: $hover-color;
       color: #fff;
+
       img.icon {
         color: #fff;
       }
@@ -53,5 +67,24 @@ $hover-color: #6b3eff;
         color: #fff;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    left: -250px; // Прячем сайдбар за экраном
+    transition: left $transition-speed ease;
+    position: fixed;
+
+    &--visible {
+      left: 0; // При появлении сайдбар перемещается на место
+    }
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); // Возвращаем элемент на место
   }
 }

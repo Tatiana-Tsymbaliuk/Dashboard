@@ -13,15 +13,12 @@ $spacing: 5px;
   justify-content: center;
 
   &__control {
-    width: $control-size;
-    height: $control-size;
     border: none;
     background-color: $background-color;
     color: $inactive-color;
     cursor: pointer;
     border-radius: $border-radius;
-
-    font-size: 18px;
+    font-size: 12px;
     transition: background-color 0.3s, color 0.3s;
 
     &:hover {
@@ -61,8 +58,7 @@ $spacing: 5px;
     width: $control-size;
     height: $control-size;
     margin-right: 5px;
-
-    font-size: 18px;
+    font-size: 12px;
     background-color: $background-color;
     color: $inactive-color;
     cursor: pointer;
@@ -86,6 +82,20 @@ $spacing: 5px;
     &:hover:not(&--active) {
       background-color: $hover-color;
       color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    &__page {
+      font-size: 10px;
+      width: 15px;
+      height: 15px;
+    }
+    &__control {
+      width: 17px;
+      height: 17px;
     }
   }
 }
